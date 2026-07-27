@@ -45,14 +45,19 @@
       formControlName="email"
     />
 
-    @if (contatoForm.get('email')?.errors && contatoForm.get('email')?.touched) {
+    @if (contatoForm.get('email')?.errors?.['required'] && contatoForm.get('email')?.touched) {
       <div class="mensagem-erro">
         Campo obrigatório
       </div>
     }
 
-    <app-separador></app-separador>
+    @if (contatoForm.get('email')?.errors?.['email'] && contatoForm.get('email')?.touched){
+      <div class="mensagem-erro">
+        Formato de e-mail inválido
+      </div>
+    }
 
+    <app-separador></app-separador>
 
     <label for="aniversario">Aniversário</label>
     <input
@@ -82,7 +87,11 @@
 
     <section class="botoes">
       <button (click)="cancelar()" class="botao-cancelar" type="button">Cancelar</button>
-      <button class="botao-salvar" type="submit">Salvar contato</button>
+      <button
+        [disabled]="contatoForm.invalid"
+        [ngClass]="contatoForm.valid ? 'botao-salvar' : 'botao-desabilitado'"
+        type="submit"
+        >Salvar contato</button>
     </section>
   </form>
 

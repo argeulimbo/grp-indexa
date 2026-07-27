@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 import { ContainerComponent } from "../../componentes/container/container.component";
 import { SeparadorComponent } from "../../componentes/separador/separador.component";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { NgClass } from "../../../../node_modules/@angular/common/index";
 
 @Component({
   selector: 'app-formulario-contato',
   standalone: true,
   imports: [
-            ContainerComponent,
-            SeparadorComponent,
-            ReactiveFormsModule
-          ],
+    ContainerComponent,
+    SeparadorComponent,
+    ReactiveFormsModule,
+    NgClass
+],
   templateUrl: './formulario-contato.component.html',
   styleUrl: './formulario-contato.component.css'
 })
@@ -40,6 +42,6 @@ export class FormularioContatoComponent {
 
   cancelar() {
     this.contatoForm.reset();
-    console.log('Form reset active')
+    console.log()
   }
 }
