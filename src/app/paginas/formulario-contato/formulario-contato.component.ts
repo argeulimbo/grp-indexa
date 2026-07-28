@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
 import { ContainerComponent } from "../../componentes/container/container.component";
 import { SeparadorComponent } from "../../componentes/separador/separador.component";
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgClass } from "../../../../node_modules/@angular/common/index";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-formulario-contato',
   standalone: true,
   imports: [
+    NgClass,
     ContainerComponent,
     SeparadorComponent,
     ReactiveFormsModule,
-    NgClass
+    RouterLink
 ],
   templateUrl: './formulario-contato.component.html',
   styleUrl: './formulario-contato.component.css'
