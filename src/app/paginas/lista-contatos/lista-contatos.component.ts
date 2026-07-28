@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { Contato } from '../../componentes/contato/contato';
 import { ContatoService } from '../../services/contato.service';
 import { ContatoComponent } from '../../componentes/contato/contato.component';
+import { PerfilContatoComponent } from '../perfil-contato/perfil-contato.component';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
@@ -18,6 +19,7 @@ import { SeparadorComponent } from '../../componentes/separador/separador.compon
     ContainerComponent,
     CabecalhoComponent,
     SeparadorComponent,
+    PerfilContatoComponent,
     ContatoComponent,
     FormsModule,
     RouterLink
