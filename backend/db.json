@@ -10,18 +10,9 @@
       "id": 1
     },
     {
-      "nome": "João",
-      "telefone": "88 88888888",
-      "email": "joao@email.com",
-      "aniversario": "1990-01-06",
-      "redes": "",
-      "observacoes": "",
-      "id": 2
-    },
-    {
       "nome": "Alice de Sá",
       "telefone": "99999999",
-      "email": "alicedeide@gmail.com",
+      "email": "lilil@gmail.com",
       "aniversario": "",
       "redes": null,
       "observacoes": null,
